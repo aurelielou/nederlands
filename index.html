@@ -3,14 +3,138 @@
 <head>
     <meta charset="UTF-8">
     <title>Cours de Néerlandais</title>
+    <style>
+        /* Configuration générale de la page */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex; /* Active la disposition en colonnes/blocs côte à côte */
+            height: 100vh; /* Prend toute la hauteur de l'écran */
+        }
+
+        /* Style de la barre latérale gauche (Menu) */
+        .sidebar {
+            width: 250px; /* Largeur du menu gauche */
+            background-color: #f4f4f4;
+            border-right: 1px solid #ddd;
+            padding: 20px;
+            box-sizing: border-box;
+            overflow-y: auto; /* Permet de défiler dans le menu s'il y a trop de chapitres */
+        }
+
+        .sidebar h2 {
+            font-size: 1.2rem;
+            color: #333;
+            margin-top: 0;
+        }
+
+        .sidebar ul {
+            list-style-type: none; /* Enlève les puces */
+            padding: 0;
+        }
+
+        .sidebar li {
+            margin-bottom: 12px;
+        }
+
+        .sidebar a {
+            text-decoration: none;
+            color: #0066cc;
+            font-weight: bold;
+        }
+
+        .sidebar a:hover {
+            text-decoration: underline;
+        }
+        
+        .content {
+            flex: 1; /* Prend tout l'espace restant à droite du menu */
+            padding: 40px;
+            overflow-y: auto; /* Permet de défiler uniquement dans le cours */
+            box-sizing: border-box;
+        }
+
+        table {
+            width: 100%;
+            max-width: 650px;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        th, td {
+            border: 1px solid #000;
+            padding: 10px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #eaeaea;
+            font-weight: bold;
+        }
+    </style>
 </head>
 <body>
     <h1>Cours de Néerlandais</h1>
-    <h2>Les différents chapitres : </h2>
-    <li><a href="chapitre1.html">Chapitre 1 : La prononciation</a></li>
-    <li>Chapitre 2 : ...</li>
-    <li>Chapitre 3 : ...</li>
+   <nav class="sidebar">
+        <h2>🇳🇱 Chapitres</h2>
+        <ul>
+            <li><a href="#introduction">Introduction</a></li>
+            <li><a href="#prononciation">1. Prononciation</a></li>
+            <li><a href="#salutations">2. ...</a></li>
+            <li><a href="#vocabulaire">3. ...</a></li>
+        </ul>
+    </nav>
 
+    <main class="content">
+        
+        <section id="introduction">
+            <h1>Cours de Néerlandais</h1>
+            <p>Bienvenue sur ce site d'apprentissage. Utilisez le menu de gauche pour naviguer entre les différentes sections du cours.</p>
+        </section>
+
+        <hr style="margin: 40px 0; border: 0; border-top: 1px solid #eee;">
+
+        <section id="prononciation">
+            <h2>1. Prononciation</h2>
+            <p>Voici les règles de base pour bien prononcer les lettres et les sons en néerlandais :</p>
+            
+            <table>
+                <thead>
+                    <tr>
+                        <th>Lettres</th>
+                        <th>Prononciation</th>
+                        <th>Exemples</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>g / ch</td>
+                        <td>« r » (Pays-Bas)</td>
+                        <td>goed (bien) / nacht (nuit)</td>
+                    </tr>
+                    <tr>
+                        <td>sch</td>
+                        <td>« s » + « r »</td>
+                        <td>school (école)</td>
+                    </tr>
+                    <tr>
+                        <td>ui</td>
+                        <td>« oeil »</td>
+                        <td>het huis (la maison)</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <hr style="margin: 40px 0; border: 0; border-top: 1px solid #eee;">
+
+        <section id="salutations">
+            <h2>2. ...</h2>
+            <p>Contenu du chapitre 2 à venir...</p>
+        </section>
+
+    </main>
 
     <p><a href="index.html">Retour à l'accueil</a></p>
 </body>
